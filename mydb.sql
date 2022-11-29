@@ -53,13 +53,13 @@ CREATE TABLE USER(
     	address varchar(100),
 		email varchar(50),
     	check_delete ENUM('still','deleted') default 'still',
-	foreign key(role_id) References ROLE(role_idrole),
+	foreign key(role_id) References ROLE(role_id),
     	constraint email_check unique(email, check_delete)
 );
 
 select * from USER;
 insert into USER(user_pass,user_name,cccd,num_phone,email) values(123,'tamnhu',123,12222,'tnhubh@gmail.com');
-drop table user;
+
 CREATE TABLE BLOG(
 	blog_id INT Primary key auto_increment,
 	title text,
